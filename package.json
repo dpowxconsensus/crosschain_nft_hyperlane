@@ -1,0 +1,59 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "build": "hardhat compile && tsc",
+    "clean": "hardhat clean && rm -rf dist cache src/types",
+    "coverage": "hardhat coverage",
+    "deploy": "hardhat run ./src/scripts/deploy.ts",
+    "lint": "eslint . --ext .ts",
+    "prettier": "prettier --write ./contracts ./src",
+    "test": "hardhat test ./src/test/**/*.test.ts",
+    "sync": "ts-node scripts/sync-with-template-repo.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "@types/coingecko-api": "^1.0.10",
+    "@types/debug": "^4.1.7",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "ethereum-waffle": "^3.4.4",
+    "hardhat": "^2.12.6",
+    "hardhat-gas-reporter": "^1.0.9",
+    "prettier": "^2.8.3",
+    "prettier-plugin-solidity": "^1.1.1",
+    "solhint": "^3.3.8",
+    "solhint-plugin-prettier": "^0.0.5",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1",
+    "typescript": "^4.9.4"
+  },
+  "files": [
+    "/dist",
+    "/contracts"
+  ],
+  "types": "dist/src/index.d.ts",
+  "main": "dist/src/index.js",
+  "dependencies": {
+    "@hyperlane-xyz/core": "^1.0.0",
+    "@hyperlane-xyz/sdk": "^1.1.0",
+    "@openzeppelin/contracts": "^4.8.1",
+    "@openzeppelin/contracts-upgradeable": "^4.8.1",
+    "@openzeppelin/hardhat-upgrades": "^1.22.1",
+    "dotenv": "^16.0.3",
+    "hardhat-contract-sizer": "^2.7.0",
+    "hardhat-deploy": "^0.11.22",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13"
+  }
+}
