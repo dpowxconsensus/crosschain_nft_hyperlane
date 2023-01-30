@@ -62,7 +62,7 @@ contract NFT is
     }
 
     function safeMint(address to, string memory uri) public payable {
-        require(msg.value >= 0.02 ether, "0.02 ether required to mint");
+        require(msg.value >= 1 wei, "1 wei required to mint");
         _safeMint(to, uri);
     }
 

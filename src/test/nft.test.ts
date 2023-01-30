@@ -61,7 +61,7 @@ describe('Hyperlane', async () => {
     await this.nftSrcProxy
       .connect(otherAccounts[0])
       .safeMint(otherAccounts[0].address, 'URI', {
-        value: ethers.utils.parseEther('0.02'),
+        value: 1, // 1 wei
       }); // due to TransparentProxy provided by sdk, admin can't control nft contract
 
     // before sending

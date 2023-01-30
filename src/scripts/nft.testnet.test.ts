@@ -69,7 +69,7 @@ async function main() {
     // const tx = await nftSrcContract
     //   .connect(signerOrigin)
     //   .safeMint(signerOrigin.address, 'URI', {
-    //     value: ethers.utils.parseEther('0.01'),
+    //     value: 1, // wei
     //   });
     // console.log('tx sent successfully with tx hash: ', tx.hash);
     // const txReceipt = await tx.wait();
